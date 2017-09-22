@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.paytab",
+    package = "com.mibrahim.paytab",
 )
 
 android_resource(
     name = "res",
-    package = "com.paytab",
+    package = "com.mibrahim.paytab",
     res = "src/main/res",
 )
 
