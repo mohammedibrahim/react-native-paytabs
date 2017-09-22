@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import PayTab from './PayTab';
+
 export default class paytab extends Component {
   render() {
     return (
