@@ -133,16 +133,18 @@ android {
     }
 }
 
+//Full recompilation is required because at least one of the classes of 'okhttp-3.6.0.jar' is already present in classpath. Analysis took 0.031 secs.
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.1'
-    compile("com.facebook.react:react-native:+") {
-        exclude module:'okhttp'
-        exclude module:'okio'
-    }
+    compile 'com.facebook.react:react-native:+'
     // From node_modules
     compile 'io.card:android-sdk:5.3.0'
     compile project(':PayTabs_SDK')
+
+
 }
 
 // Run this once to be able to run the application with BUCK
