@@ -56,7 +56,6 @@ export default class paytab extends Component {
             'order_id' : '1234567',
             'tax' : '',
 
-
             //Customer Details
             'transaction_title' : 'Mr. John Doe',
             'customer_email' : 'test@example.com',
