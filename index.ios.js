@@ -12,12 +12,27 @@ import {
   View
 } from 'react-native';
 
+import { NativeModules } from 'react-native';
+// var HelloManager = NativeModules.HelloManager;
+
 export default class paytab extends Component {
   render() {
+
+    const callback = (error, events) => {
+      if (error) {
+        console.error(error);
+      } else {
+        console.log(events);
+        alert(events);
+      }
+    };
+
+    // const txt = HelloManager.addEvent('Birthday Party', '4 Privet Drive, Surrey', callback);
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcomeee to React Native!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
@@ -25,6 +40,9 @@ export default class paytab extends Component {
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
+        </Text>
+        <Text style={styles.instructions}> 
+        Hello, {txt}
         </Text>
       </View>
     );
