@@ -37,6 +37,48 @@ export default class paytab extends Component {
             </View>
         );
     }
+
+    async paytab() {
+
+        var res = await PayTab.createOrder({
+
+            //Merchant Details
+            'merchant_email': 'harede0@gmail.com',
+            'secret_key' : 'kuCzGvELL6S6oJE1BFVvfsiLbGqePqGaUjJBPomAufHSZlUB1P7hip2t5tHVTo5OHPpwdM7H1OA1auCcjJtB9w5fZNaSbfGT45pi',
+            // 'timeout_in_seconds' : '-1', //optional
+            'locale' : 'en',
+
+            //Product Details
+            'product_name' : 'Samsung Galaxy S6',
+            'amount' : '100',
+            'currency_code' : 'EGP',
+            'shared_prefs_name' : 'myapp_shared',
+            'order_id' : '1234567',
+            'tax' : '',
+
+
+            //Customer Details
+            'transaction_title' : 'Mr. John Doe',
+            'customer_email' : 'test@example.com',
+            'customer_phone_number' : '0097300001',
+
+            //Billing Address
+            'address_billing' : 'Flat 1,Building 123, Road 2345',
+            'city_billing' : 'Juffair',
+            'state_billing' : 'Manama',
+            'country_billing' : 'Bahrain',
+            'postal_code_billing' : '00973',
+
+            //Shipping Address
+            'address_shipping' : 'Flat 1,Building 123, Road 2345',
+            'city_shipping' : 'Juffair',
+            'state_shipping' : 'Manama',
+            'country_shipping' : 'Bahrain',
+            'postal_code_shipping' : '00973',
+
+        });
+
+    }
 }
 
 const styles = StyleSheet.create({

@@ -35,31 +35,35 @@ RCT_EXPORT_METHOD(createOrder:(NSDictionary *)jsonObj
     } else {
       view = [[PayTabCardReaderViewController alloc] initWithNibName:@"PayTabCardReaderViewController_iPhone" bundle:nil];
     }
+  
     //jsonObj[@"key"]
-    view.tag_amount = @"30.000"; // hairari gin?
-    view.tag_title = @"Haotel"; // hotel i anun@
-    view.tag_currency = @"SAR"; // currency
-    view.sdklanguage = @"en";
-    view.tag_tax = @"0.0";
-    view.shipping_address = @"Manama8ahrain";
-    view. shipping_city = @"Manaira";
-    view.shiping_country = @"SAU";
-    view.shipping_state = @"Manana";
-    view.shipping_zip_code = @"00973";
-    view.billing_address = @"RiyadhSaudiArabia";
-    view.billing_city = @"Manara";
-    view.billing_country = @"SAU";
-    view.billing_state = @"Manarra";
-    view.billing_zip_code = @"00973";
-    view.order_id = @"12333";
-    view.phonenum = @"00973312345678";
-    view.customer_email = @"abc@accept.com";
-    view.tag_merchant_email = @"harede0@gmail.com";
-    //view.tag_frerchant_email = @"aliaasaudil@paytabs.com";
-    view.timerFlag = 20100; //seconds
-    view.secretKey = @"kuCzGvELL6S6oJE1BFVvfsiLbGqePqGaUjJBPomAufHSZlUB1P7hip2t5tHVTo5OHPpwdM7H1OA1auCcjJtB9w5fZNaSbfGT45pi";
-    //view.secretKey = @"zoVCrglw0zCN22cXIZt5YM3TnAKoA5paulNWB0tqo6eq8roRqSWoEZhlA2qb7PlCa9yMX2cni8qMgSb7i34HH3ZID19P9YaL9jkVh";
-    view.tag_original_assignee_code = @"SDK"; // booking id - n
+    view.tag_amount = jsonObj[@"amount"];
+    view.tag_title = jsonObj[@"product_name"];
+    view.tag_currency = jsonObj[@"currency_code"];
+    view.sdklanguage = jsonObj[@"locale"];
+    view.tag_tax = jsonObj[@"tax"];
+  
+    view.shipping_address = jsonObj[@"address_shipping"];
+    view. shipping_city = jsonObj[@"city_shipping"];
+    view.shiping_country = jsonObj[@"country_shipping"];
+    view.shipping_state = jsonObj[@"state_shipping"];
+    view.shipping_zip_code = jsonObj[@"postal_code_shipping"];
+  
+    view.billing_address = jsonObj[@"address_billing"];
+    view.billing_city = jsonObj[@"city_billing"];
+    view.billing_country = jsonObj[@"country_billing"];
+    view.billing_state = jsonObj[@"state_billing"];
+    view.billing_zip_code = jsonObj[@"postal_code_billing"];
+  
+    view.order_id = jsonObj[@"order_id"];
+    view.phonenum = jsonObj[@"customer_phone_number"];
+    view.customer_email = jsonObj[@"customer_email"];
+  
+    view.timerFlag = jsonObj[@"timeout_in_seconds"];
+    view.tag_merchant_email = jsonObj[@"merchant_email"];
+    view.secretKey = jsonObj[@"secret_key"];
+  
+    view.tag_original_assignee_code = jsonObj[@"SDK"]; // booking id - n
     
 //    [self presentViewController:view animated:YES completion:nil];
   
