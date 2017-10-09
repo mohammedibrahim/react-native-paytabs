@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 
-@interface PayTab : NSObject <RCTBridgeModule>
+@interface PayTab : NSObject <RCTBridgeModule,UIViewControllerTransitioningDelegate>
 
-
+@property RCTPromiseResolveBlock resolveObj;
 @end

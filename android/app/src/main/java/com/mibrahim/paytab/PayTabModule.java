@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 import android.content.res.Configuration;
@@ -14,15 +13,15 @@ import android.content.res.Resources;
 
 //React Native
 import com.facebook.react.bridge.ActivityEventListener;
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.BaseActivityEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.WritableMap;
 
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 import paytabs.project.PayTabActivity;
 
@@ -41,17 +40,13 @@ public class PayTabModule extends ReactContextBaseJavaModule {
 
             String pt_response_code = shared_prefs.getString("pt_response_code", "");
 
-            String pt_transaction_id = shared_prefs.getString("pt_transaction_id", "");
+            String pt_transaction_id = shared_prefs.getString("pt_transaction_id", "");s
 
-            Toast
-                    .makeText(context, "PayTabs Response Code : " + pt_response_code, Toast.LENGTH_LONG)
-                    .show();
+            WritableMap map = Arguments.createMap();
+            map.putString("response_code", pt_response_code);
+            map.putString("transaction_id", pt_transaction_id);
 
-            Toast
-                    .makeText(context, "Paytabs transaction ID after payment : " + pt_transaction_id, Toast.LENGTH_LONG)
-                    .show();
-
-            mPickerPromise.resolve(shared_prefs.toString());
+            mPickerPromise.resolve(map);
         }
     };
 
@@ -115,6 +110,7 @@ public class PayTabModule extends ReactContextBaseJavaModule {
         in.putExtra("pt_state_shipping", "Manama");
         in.putExtra("pt_country_shipping", "Bahrain");
         in.putExtra("pt_postal_code_shipping", "00973");
+
         int requestCode = 0;
 
         currentActivity.startActivityForResult(in, requestCode);

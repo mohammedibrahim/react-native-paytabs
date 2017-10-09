@@ -9,11 +9,10 @@ import {
     AppRegistry,
     StyleSheet,
     Text,
-    TouchableOpacity,
     View
 } from 'react-native';
 
-import PayTab from './PayTab';
+import Bootstrap from './app/bootstrap';
 
 export default class paytab extends Component {
 
@@ -33,17 +32,10 @@ export default class paytab extends Component {
                     Shake or press menu button for dev menu
                 </Text>
 
-                <TouchableOpacity onPress={this.paytab}>
-                    <Text style={styles.welcome}>PayTab Integration</Text>
-                </TouchableOpacity>
+                <Bootstrap />
 
             </View>
         );
-    }
-
-    async paytab() {
-        var res = await PayTab.createOrder();
-        console.log(res);
     }
 }
 

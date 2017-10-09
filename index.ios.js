@@ -9,6 +9,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View
 } from 'react-native';
 
@@ -17,30 +18,6 @@ var PayTab = NativeModules.PayTab;
 
 export default class paytab extends Component {
   render() {
-
-    const callback = (response, error) => {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(response);
-        alert( 'First' + response);
-      }
-    };
-
-    const txt = "test";
-
-    async function updateEvents() {
-      try {
-        var events = await PayTab.addEvent('Birthday Party', '4 Privet Drive, Surrey');
-
-        alert(events);
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-updateEvents();
-
 
     return (
       <View style={styles.container}>
@@ -54,12 +31,20 @@ updateEvents();
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
-        <Text style={styles.instructions}> 
-        Hello, {txt}
-        </Text>
+
+        <TouchableOpacity onPress={this.paytab}>
+              <Text style={styles.welcome}>PayTab Integration</Text>
+        </TouchableOpacity>
+
       </View>
     );
   }
+
+  async paytab() {
+        var res = await PayTab.createOrder({'a':'b'});
+        console.log(res);
+
+    }
 }
 
 const styles = StyleSheet.create({
