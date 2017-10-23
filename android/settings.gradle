@@ -1,3 +1,0 @@
-rootProject.name = 'paytab'
-
-include ':app', ':PayTabs_SDK'
