@@ -25,6 +25,9 @@ import java.util.Locale;
 
 import paytabs.project.PayTabActivity;
 
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
+
 public class ReactNativePayTabs extends ReactContextBaseJavaModule {
 
     private Context context;
@@ -36,9 +39,23 @@ public class ReactNativePayTabs extends ReactContextBaseJavaModule {
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent intent) {
 
-            SharedPreferences shared_prefs = context.getSharedPreferences("myapp_shared", Context.MODE_PRIVATE);
+            SharedPreferences paytabs_create_order = context.getSharedPreferences("paytabs_create_order", Context.MODE_PRIVATE);
 
-            mPickerPromise.resolve(shared_prefs.toString());
+            String pt_response_code = paytabs_create_order.getString("pt_response_code", "");
+
+            String pt_transaction_id = paytabs_create_order.getString("pt_transaction_id", "");
+
+            Toast.makeText(activity, "PayTabs Response Code : " + pt_response_code,Toast.LENGTH_LONG).show();
+
+            Toast.makeText(activity, "Paytabs transaction ID after payment : " + pt_transaction_id, Toast.LENGTH_LONG).show();
+
+            WritableMap resultData = new WritableNativeMap();
+
+            resultData.putString( "response_code", pt_response_code);
+
+            resultData.putString( "transaction_id", pt_transaction_id);
+
+            mPickerPromise.resolve(resultData);
         }
     };
 
@@ -52,7 +69,7 @@ public class ReactNativePayTabs extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "PayTab";
+        return "PayTabs";
     }
 
     @ReactMethod
@@ -82,7 +99,7 @@ public class ReactNativePayTabs extends ReactContextBaseJavaModule {
         in.putExtra("pt_transaction_title", data.hasKey("transaction_title") ? data.getString("transaction_title") : "" );
         in.putExtra("pt_amount", data.hasKey("amount") ? data.getString("amount") : "" );
         in.putExtra("pt_currency_code", data.hasKey("currency_code") ? data.getString("currency_code") : "" ); //Use Standard 3 character ISO
-        in.putExtra("pt_shared_prefs_name", data.hasKey("shared_prefs_name") ? data.getString("shared_prefs_name") : "" );
+        in.putExtra("pt_shared_prefs_name", "paytabs_create_order" );
         in.putExtra("pt_customer_email", data.hasKey("customer_email") ? data.getString("customer_email") : "" );
         in.putExtra("pt_customer_phone_number", data.hasKey("customer_phone_number") ? data.getString("customer_phone_number") : "" );
         in.putExtra("pt_order_id", data.hasKey("order_id") ? data.getString("order_id") : "" );
