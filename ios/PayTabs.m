@@ -28,6 +28,10 @@ RCT_EXPORT_METHOD(createOrder:(NSDictionary *)jsonObj
 
 - (IBAction)checking:(NSDictionary*)jsonObj {
   
+    #if TARGET_IPHONE_SIMULATOR
+      return;
+    #endif
+  
     PayTabCardReaderViewController *view;
   
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
