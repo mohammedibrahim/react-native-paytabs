@@ -8,13 +8,13 @@
 
 #import <React/RCTLog.h>
 
-#import "PayTab.h"
+#import "PayTabs.h"
 #import "PayTabCardReaderViewController.h"
 #import "PayTabsViewController.h"
 
-@implementation PayTab
+@implementation PayTabs
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(PayTabs);
 
 RCT_EXPORT_METHOD(createOrder:(NSDictionary *)jsonObj
                   createOrderWithResolver:(RCTPromiseResolveBlock)resolve

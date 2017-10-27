@@ -45,15 +45,15 @@ public class ReactNativePayTabs extends ReactContextBaseJavaModule {
 
             String pt_transaction_id = paytabs_create_order.getString("pt_transaction_id", "");
 
-            Toast.makeText(activity, "PayTabs Response Code : " + pt_response_code,Toast.LENGTH_LONG).show();
-
-            Toast.makeText(activity, "Paytabs transaction ID after payment : " + pt_transaction_id, Toast.LENGTH_LONG).show();
+            String pt_description = paytabs_create_order.getString("pt_description", "");
 
             WritableMap resultData = new WritableNativeMap();
 
             resultData.putString( "response_code", pt_response_code);
 
             resultData.putString( "transaction_id", pt_transaction_id);
+
+            resultData.putString( "description", pt_description);
 
             mPickerPromise.resolve(resultData);
         }

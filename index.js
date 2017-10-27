@@ -5,9 +5,11 @@
 'use strict';
 
 import React, {Component} from 'react'
-import { NativeModules} from 'react-native'
+import {NativeModules} from 'react-native'
 
 const { PayTabs } = NativeModules;
+
+console.log(PayTabs);
 
 function PayTabsVerifyPayment(transactionDetails, callback){
 
