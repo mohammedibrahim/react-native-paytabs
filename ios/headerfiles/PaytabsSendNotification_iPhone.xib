@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaytabsSendNotification">
@@ -26,14 +30,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wP-sX-fXO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="p-icon-small-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-NM-cat">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="p-icon-small-logo.png" highlightedImage="Icon-40.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-NM-cat">
                             <rect key="frame" x="149" y="8" width="22" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="22" id="zgr-Kj-p4N"/>
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.2470588235" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.0" green="0.2470588235" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="rBH-NM-cat" firstAttribute="centerX" secondItem="4wP-sX-fXO" secondAttribute="centerX" id="7Q8-0G-jPZ"/>
                         <constraint firstAttribute="bottom" secondItem="rBH-NM-cat" secondAttribute="bottom" constant="1" id="e4Q-AT-lBi"/>
@@ -56,7 +60,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="K3x-4x-2sq" firstAttribute="top" secondItem="apI-bL-aSU" secondAttribute="top" constant="1" id="7M9-Gs-nAE"/>
                         <constraint firstItem="gxe-Jg-gr0" firstAttribute="top" secondItem="apI-bL-aSU" secondAttribute="topMargin" id="UAn-pV-Skd"/>
@@ -77,7 +81,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Fdk-90-upb" firstAttribute="centerX" secondItem="azB-Uy-5zB" secondAttribute="centerX" id="4zN-Pq-0Ui"/>
                         <constraint firstItem="Fdk-90-upb" firstAttribute="centerY" secondItem="azB-Uy-5zB" secondAttribute="centerY" id="Id7-FO-ndZ"/>
@@ -87,13 +91,13 @@
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-sX-kjU">
                     <rect key="frame" x="22" y="229" width="280" height="30"/>
-                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00973" borderStyle="roundedRect" placeholder="Customer Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJX-s6-gLV">
                     <rect key="frame" x="22" y="274" width="280" height="30"/>
-                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                 </textField>
@@ -105,8 +109,8 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="No, Thank you">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="noThankYou:" destination="-1" eventType="touchDown" id="L1l-lJ-cVz"/>
@@ -114,21 +118,21 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-28-R4O">
                     <rect key="frame" x="83" y="326" width="154" height="41"/>
-                    <color key="backgroundColor" red="0.25490196079999999" green="0.60784313729999995" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.25490196079999999" green="0.60784313729999995" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="hqe-dQ-WQl"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <state key="normal" title="SEND">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="sendNotification:" destination="-1" eventType="touchDown" id="GQS-fL-jE3"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HJX-s6-gLV" firstAttribute="trailing" secondItem="1nP-sX-kjU" secondAttribute="trailing" id="30l-mb-pzt"/>
                 <constraint firstItem="apI-bL-aSU" firstAttribute="top" secondItem="4wP-sX-fXO" secondAttribute="bottom" id="4Zv-TA-ADm"/>
@@ -160,6 +164,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Icon-40.png" width="40" height="40"/>
         <image name="p-icon-small-logo.png" width="20" height="25"/>
     </resources>
 </document>

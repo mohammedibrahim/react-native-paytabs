@@ -16,6 +16,19 @@
 
 RCT_EXPORT_MODULE(PayTabs);
 
+RCT_REMAP_METHOD(isSimulator, resolver: (RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  if( TARGET_IPHONE_SIMULATOR ) {
+    NSString *thingToReturn = @"Yes";
+    resolve(thingToReturn);
+  } else {
+    NSString *thingToReturn = @"No";
+    resolve(thingToReturn);
+  }
+}
+
+
 RCT_EXPORT_METHOD(createOrder:(NSDictionary *)jsonObj
                   createOrderWithResolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject
@@ -68,8 +81,6 @@ RCT_EXPORT_METHOD(createOrder:(NSDictionary *)jsonObj
     view.secretKey = jsonObj[@"secret_key"];
   
     view.tag_original_assignee_code = jsonObj[@"SDK"]; // booking id - n
-    
-//    [self presentViewController:view animated:YES completion:nil];
   
   
   UIViewController *rootViewController = [[[[UIApplication sharedApplication]delegate] window] rootViewController];

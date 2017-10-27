@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,6 +28,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your transaction number is" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juo-ds-S8n">
+                    <rect key="frame" x="47" y="346" width="226" height="59"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="59" id="YfI-Jj-Yc2"/>
                     </constraints>
@@ -32,6 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHx-5A-6Kc">
+                    <rect key="frame" x="65" y="413" width="190" height="41"/>
                     <color key="backgroundColor" red="0.25490196079999999" green="0.60784313729999995" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="goQ-Ns-0hS"/>
@@ -46,6 +51,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The payment is completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2x-Ul-2gk">
+                    <rect key="frame" x="56" y="274" width="208" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Pew-t3-6NI"/>
                     </constraints>
@@ -54,6 +60,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zK-hI-k7Z">
+                    <rect key="frame" x="56" y="298" width="208" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="3yc-Db-Jag"/>
                     </constraints>
@@ -62,8 +69,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-WV-h8d">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="p-icon-small-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-9j-2Hx">
+                            <rect key="frame" x="149" y="28" width="22" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="22" id="Ic0-jP-w7Q"/>
                             </constraints>
@@ -77,13 +86,16 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ax5-5B-pSd">
+                    <rect key="frame" x="0.0" y="44" width="320" height="64"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-OY-jCe">
+                            <rect key="frame" x="171" y="1" width="132" height="64"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rup-eq-wKq">
+                            <rect key="frame" x="22" y="8" width="62" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="62" id="ti2-nd-tIv"/>
                             </constraints>
@@ -101,8 +113,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a30-OU-bL8">
+                    <rect key="frame" x="0.0" y="108" width="320" height="125"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Succeeded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-5Z-lkO">
+                            <rect key="frame" x="27" y="8" width="285" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="3or-GD-ESa"/>
                             </constraints>
@@ -111,6 +125,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accept-medium-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="534-Ag-fqY">
+                            <rect key="frame" x="132.5" y="50" width="55" height="55"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="55" id="jCA-c9-Mlc"/>
                             </constraints>
