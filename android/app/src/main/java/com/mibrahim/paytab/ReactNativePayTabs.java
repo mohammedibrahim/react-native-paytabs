@@ -55,7 +55,9 @@ public class ReactNativePayTabs extends ReactContextBaseJavaModule {
 
             resultData.putString( "description", pt_description);
 
-            mPickerPromise.resolve(resultData);
+            if(mPickerPromise != null && resultData != null){
+                mPickerPromise.resolve(resultData);
+            }
         }
     };
 
